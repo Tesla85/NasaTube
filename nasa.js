@@ -29,6 +29,15 @@ firebase.initializeApp(config);
 // Global variables
 var database = firebase.database();
 var userInput = "";
+var queryParam = document.location.search
+
+if (queryParam){ 
+//    queryapi(queryParam) // queryapi is a placeholder for Brandt's variable for this
+} 
+else {
+};
+
+
 
 // Click event for the search button to register the user input
 $("#search-button").on("click", function() {
@@ -41,6 +50,8 @@ $("#search-button").on("click", function() {
         userInput : userInput,
     });
 
+    window.location.href="./results.html?q=" + userInput
+
     $("#user-input").val("");
     return false;
 });
@@ -50,7 +61,7 @@ database.ref().on("child_added", function(snap) {
     console.log(snap.val());
 });
 
-
+/*
 // Click event for the search button to register the user input
 $("#voting-button").on("click", function() {
     event.preventDefault();
@@ -70,6 +81,7 @@ $("#voting-button").on("click", function() {
 database.ref().on("child_added", function(snap) {
     console.log(snap.val());
 });
+*/
 
 
 // Reloads a new page and a search within 
