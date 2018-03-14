@@ -30,27 +30,48 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var userInput = "";
 
-// Click event for the search button ("#seach-button")
+// Click event for the search button to register the user input
 $("#search-button").on("click", function() {
     event.preventDefault();
     userInput = $("#user-input").val().trim();
     console.log(userInput);
 
-    // And pushed into the database
+    // Push the user input in to the Firebase database
     database.ref().push({
         userInput : userInput,
+    });
+
+    $("#user-input").val("");
+    return false;
+});
+
+// User input added in the Firebase database
+database.ref().on("child_added", function(snap) {
+    console.log(snap.val());
+});
+
+
+// Click event for the search button to register the user input
+$("#voting-button").on("click", function() {
+    event.preventDefault();
+
+    var clickCounter = 0;
+    clickCounter++;
+
+    // Push the user like in to the Firebase database
+    database.ref().push({
+        clickCount: clickCounter,
     });
 
     return false;
 });
 
+// User input added in the Firebase database
 database.ref().on("child_added", function(snap) {
     console.log(snap.val());
 });
 
-//var userSearch = $("#userSearch")
 
-// Click event for entering "Enter" key to start search ("#search-enter")
 // Reloads a new page and a search within 
 
 // Nasa API return description to populate the id ("#description-box)
