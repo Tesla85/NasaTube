@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Universe Explorer</title>
+  <title>Universe Explorer - Results</title>
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -13,7 +13,7 @@
   <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
@@ -24,7 +24,7 @@
           <nav class="grey darken-3">
             <div class="nav-wrapper">
               <a class="start-image" href="https://www.universefx.com/wp-content/uploads/2016/05/UniverseFX_logo.png" class="brand-logo left">
-                <!-- <img id="logo" class="responseve-img" height="80%" src="./assets/images/UniverseFX_logo.png" href="index.html" /> -->
+                <!-- <img id="logo" class="responsive-img" height="80%" src="./assets/images/UniverseFX_logo.png" href="index.html" /> -->
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
@@ -46,50 +46,25 @@
       <div class="row">
         <div class="col s12">
           <div class="card">
-            <div class="card-image">
-              <img src="http://www.basicknowledge101.com/photos/2015/space/Elephant-4214115.jpg">
-              <span class="card-title">The Explorer</span>
+            <div class="card-image results-image">
+              <img src="">
+              <span class="card-title ">The Explorer</span>
+              <a id="voting-button" class="btn-floating halfway-fab waves-effect waves-light red">
+                <i id="thumbs-up" class="material-icons">thumb_up</i>
+              </a>
             </div>
           </div>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <nav>
-            <div class="nav-wrapper grey darken">
-              <form>
-                <div class="input-field">
-                  <input id="user-input" type="search" required>
-                  <label class="label-icon" for="search">
-                    <i class="material-icons">search</i>
-                  </label>
-                  <i class="material-icons">close</i>
-                  <button id="search-button" class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Search
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </nav>
-        </div>
-
-        <div class="col s6">
-          <div class="video">
-            <iframe width="100%" height="360" src="https://www.youtube.com/embed/yWo71eHjoQY?list=PLGMVCsud2sqU2tzV1De6z1HhZgp-fIiX1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <div class="vidoes-go-here"></div>
 
   </main>
 
 
 
   <footer class="page-footer grey darken-3">
-    <!-- <div class="container">
+    <!-- 
+    <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">The Universe Explorer</h5>
@@ -105,11 +80,13 @@
   </footer>
 
 
-  <!-- Firebase Script -->
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 
   <!-- jQuery Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Twitter script -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script type="text/javascript" src="nasa.js"></script>
 
 </body>
