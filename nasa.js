@@ -30,14 +30,43 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var userInput = "";
 var queryParam = document.location.search
+console.log(queryParam)
 
 if (queryParam){ 
-//    queryapi(queryParam) // queryapi is a placeholder for Brandt's variable for this
+    displayImages(queryParam)
 } 
 else {
 };
 
 
+
+function displayImages(queryParam) {
+
+    var queryURL = "https://images-api.nasa.gov/search" + queryParam;
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+
+    // The data from the API will be 
+    .then(function(response) {
+        console.log(response.collection.items[1].links[0].href);
+
+        for (var i = 0; i < 5; i++) {
+
+            var nasaImageDiv = $("<div>");
+            var nasaImageResult = $("<img>");
+            nasaImageResult.attr("src", response.collection.items[i].links[0].href);  //
+
+            $(".results-image").append(nasaImageResult);
+
+        }
+    })
+
+}; /// END OF FUNCTION
+
+// $(document).on("click", "#search-button", displayImages);
 
 // Click event for the search button to register the user input
 $("#search-button").on("click", function() {
@@ -45,15 +74,17 @@ $("#search-button").on("click", function() {
     userInput = $("#user-input").val().trim();
     console.log(userInput);
 
+    /*
     // Push the user input in to the Firebase database
     database.ref().push({
         userInput : userInput,
     });
+    */
 
     window.location.href="./results.html?q=" + userInput
 
     $("#user-input").val("");
-    return false;
+    
 });
 
 // User input added in the Firebase database
