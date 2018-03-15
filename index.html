@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Univese Explorer</title>
 
-  <!-- Compiled and minified JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script><!-- Compiled and minified JavaScript -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <script type="text/javascript" src="assets/js/nasa.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
  <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://apis.google.com/js/api.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Geostar|Orbitron:700|Press+Start+2P" rel="stylesheet">
+ 
+
 </head>
 <body>
 <div class="container">
@@ -40,6 +41,7 @@
         </div>
       </div>
     </div>
+
   </header>
 
   <main>
@@ -62,7 +64,7 @@
               <form>
                 <div class="input-field">
                   <form>
-                    <input name="keyword" id="user-input keyword" type="search" required>
+                    <input name="keyword" id="user-input" type="search" required>
                       <label class="label-icon" for="search">
                         <i class="material-icons">search</i>
                       </label>
@@ -79,7 +81,7 @@
 
         <div class="col s6">
           <div class="video">
-            <iframe width="100%" height="360" src="https://www.youtube.com/embed/yWo71eHjoQY?list=PLGMVCsud2sqU2tzV1De6z1HhZgp-fIiX1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe width="100%" height="360" src="https://www.youtube.com/embed/yWo71eHjoQY?list=PLGMVCsud2sqU2tzV1De6z1HhZgp-fIiX1" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
           </div>
         </div>
       </div>
@@ -88,13 +90,9 @@
 
 </div>
 
-    
-
 </main>
 
-</body>
-
- <footer class="page-footer grey darken-3">
+<footer class="page-footer grey darken-3">
     <!-- <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -109,5 +107,11 @@
       </div>
     </div>
   </footer>
+
+
+<script type="text/javascript" src="assets/js/nasa.js"></script>
+</body>
+
+ 
 
 </html>

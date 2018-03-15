@@ -11,7 +11,7 @@ var config = {
 
 
     var searchURL="https://images-api.nasa.gov/search?q=" + userInput;
-    var nasaURL = "https://images-assets.nasa.gov/image/" + nasaId + "/" + nasaId + "~thumb.jpg";
+    // var nasaURL = "https://images-assets.nasa.gov/image/" + nasaId + "/" + nasaId + "~thumb.jpg";
     var database = firebase.database();
     var userInput = "";
     
@@ -24,7 +24,7 @@ var config = {
     $("button[type=submit]").click(function (event) {
         event.preventDefault();
     
-        var keyword = $("#keyword").val().trim();
+        var keyword = $("#user-input").val().trim();
         if (!keyword) {
         alert("Do I look like a mind reader? Please enter a keyword.");
         return;
@@ -37,7 +37,23 @@ var config = {
         })
     });
 
-    
+    // $.ajax({
+    //     url: searchURL,
+    //     success: function(result){
+        
+    //     if(result.media_type === "image") {
+    //       $("#apod_img_id").css("display", "none"); 
+    //     }
+    //     else {
+    //       $("#apod_img_id").attr("src", result.url);
+    //     }
+      
+    //     $("#apod_explaination").text(result.explanation);
+    //     $("#returnObject").text(JSON.stringify(result, null, 4));  
+       
+    //     $("#apod_title").text(result.title);
+    //   }
+    //   });
 
 //   $.ajax({
 //     url: url,
