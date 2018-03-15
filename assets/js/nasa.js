@@ -9,12 +9,12 @@ var config = {
   };
     firebase.initializeApp(config);
 
-    var url = "https://api.nasa.gov/planetary/apod?api_key=SnFZfRiVeCkDqajYRBEHeY20OQpGzhVfW1fwUsEh";
+
     var searchURL="https://images-api.nasa.gov/search?q=" + userInput;
+    var nasaURL = "https://images-assets.nasa.gov/image/" + nasaId + "/" + nasaId + "~thumb.jpg";
     var database = firebase.database();
     var userInput = "";
-    var metaURL="https://images-assets.nasa.gov/image/" + id +  "/metadata.json";
-
+    
     gapi.load('client', function () {
         gapi.client.init({
         "apiKey": "AIzaSyDmUrAQsG5BGpvJOlVy8Ch4Odkg8anh2I4"
@@ -37,13 +37,32 @@ var config = {
         })
     });
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-        }).then(function(response) {
-            console.log(response);
-            console.log(response.Runtime);
-          });
+    
+
+//   $.ajax({
+//     url: url,
+//     success: function(result){
+//     if("copyright" in result) {
+//       $("#copyright").text("Image Credits: " + result.copyright);
+//     }
+//     else {
+//       $("#copyright").text("Image Credits: " + "Public Domain");
+//     }
+    
+//     if(result.media_type == "video") {
+//       $("#apod_img_id").css("display", "none"); 
+//       $("#apod_vid_id").attr("src", result.url);
+//     }
+//     else {
+//       $("#apod_vid_id").css("display", "none"); 
+//       $("#apod_img_id").attr("src", result.url);
+//     }
+//     $("#reqObject").text(url);
+//     $("#returnObject").text(JSON.stringify(result, null, 4));  
+//     $("#apod_explaination").text(result.explanation);
+//     $("#apod_title").text(result.title);
+//   }
+// });
 
     // Click event for the search button to register the user input
     $("#search-button").on("click", function() {
@@ -84,39 +103,12 @@ var config = {
 
 
 
+   
 
 
 
-//   $.ajax({
-//     url: url,
-//     success: function(result){
-//     if("copyright" in result) {
-//       $("#copyright").text("Image Credits: " + result.copyright);
-//     }
-//     else {
-//       $("#copyright").text("Image Credits: " + "Public Domain");
-//     }
-    
-//     if(result.media_type == "video") {
-//       $("#apod_img_id").css("display", "none"); 
-//       $("#apod_vid_id").attr("src", result.url);
-//     }
-//     else {
-//       $("#apod_vid_id").css("display", "none"); 
-//       $("#apod_img_id").attr("src", result.url);
-//     }
-//     $("#reqObject").text(url);
-//     $("#returnObject").text(JSON.stringify(result, null, 4));  
-//     $("#apod_explaination").text(result.explanation);
-//     $("#apod_title").text(result.title);
-//   }
-// });
 
 // Global variables
-
-
-
-
 
 // Reloads a new page and a search within 
 

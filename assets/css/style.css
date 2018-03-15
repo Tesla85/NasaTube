@@ -1,33 +1,13 @@
-/* body {
-    background-image: url("../images/background.jpg");
-    /* background-color: black; */
-    /* background-repeat: no-repeat;
-    background-size: auto;
-    font-family: 'Rubik Mono One', sans-serif;
-    font-family: 'Bowlby One', cursive;
+ body {
+    /* background-image: url("../images/background.jpg"); */
+    background-color: black;
+    background-repeat: no-repeat;
     font-family: 'Orbitron', sans-serif;
-    font-family: 'Bungee Inline', cursive;
-    font-family: 'Bungee Shade', cursive;
-
-    }  */ 
-
-    body {
-        background-color: black;
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-        color: #A9A9A9;
-    }
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Geostar', cursive;
+    } 
     
-    main {
-        min-height: 100hv;
-        flex: 1 0 auto;
-    }
-    
-    .container {
-        margin: 0 auto;
-        width:100%;
-    }
     
     .footer-copyright {
         text-align: center;

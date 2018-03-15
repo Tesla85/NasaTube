@@ -8,27 +8,25 @@
 
   <!-- Compiled and minified JavaScript -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/js/nasa.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
  <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://apis.google.com/js/api.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Geostar|Orbitron:700|Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-
-  <script type="text/javascript" src="assets/js/nasa.js"></script>
-
+<div class="container">
   <header>
+    
     <div class="row">
       <div class="col s12">
         <div class="nav-wrapper">
           <nav class="grey darken-3">
             <div class="nav-wrapper">
-              <a class="start-image" href="https://www.universefx.com/wp-content/uploads/2016/05/UniverseFX_logo.png" class="brand-logo left">
-                <!-- <img id="logo" class="responseve-img" height="80%" src="./assets/images/UniverseFX_logo.png" href="index.html" /> -->
-              </a>
+              <h1>Unverse Explorer</h1>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                   <a href="index.html">Startpage</a>
@@ -45,14 +43,13 @@
   </header>
 
   <main>
-    <div class="container">
+    
       <div class="row">
         <div class="col s12">
           <div class="card">
             <div class="card-image">
-              <img src="http://www.basicknowledge101.com/photos/2015/space/Elephant-4214115.jpg">
+              <img src="https://thumbor.forbes.com/thumbor/960x0/smart/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2018%2F01%2F1_2rjm7D41jIgVvGP__OL1wg.jpg">
               <span class="card-title">The Explorer</span>
-
             </div>
           </div>
         </div>
@@ -64,14 +61,16 @@
             <div class="nav-wrapper grey darken">
               <form>
                 <div class="input-field">
-                  <input id="user-input" type="search" required>
-                  <label class="label-icon" for="search">
-                    <i class="material-icons">search</i>
-                  </label>
-                  <i class="material-icons">close</i>
-                  <button id="search-button" class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Search
-                    <i class="material-icons right">send</i>
-                  </button>
+                  <form>
+                    <input name="keyword" id="user-input keyword" type="search" required>
+                      <label class="label-icon" for="search">
+                        <i class="material-icons">search</i>
+                      </label>
+                      <i class="material-icons">close</i>
+                      <button id="search-button" class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Search
+                        <i class="material-icons right">send</i>
+                      </button>
+                  </form>
                 </div>
               </form>
             </div>
@@ -84,17 +83,15 @@
           </div>
         </div>
       </div>
-    </div>
+  
+      <div class="vidoes-go-here"></div>
 
-    <div class="vidoes-go-here"></div>
+</div>
 
-  </main>
+    
 
-    <form>
-        <input type="text" name="keyword" id="keyword">
-        <button type="submit">Search</button>
-    </form>
- 
+</main>
+
 </body>
 
  <footer class="page-footer grey darken-3">
